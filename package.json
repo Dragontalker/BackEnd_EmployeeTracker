@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Dragontalker/BackEnd_EmployeeTracker/issues"
   },
-  "homepage": "https://github.com/Dragontalker/BackEnd_EmployeeTracker#readme"
+  "homepage": "https://github.com/Dragontalker/BackEnd_EmployeeTracker#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

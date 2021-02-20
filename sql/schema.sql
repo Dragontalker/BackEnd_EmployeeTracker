@@ -20,3 +20,9 @@ CREATE TABLE role (
     department_id INT NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE department (
+    id INT AUTO_INCREMENT NOT NULL;
+    name VARCHAR(30),
+    PRIMARY KEY(id)
+);

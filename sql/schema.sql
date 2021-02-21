@@ -1,4 +1,4 @@
-DROP DATABASE IF EXIST employee_db;
+DROP DATABASE IF EXISTS employee_db;
 
 CREATE DATABASE employee_db;
 
@@ -22,7 +22,7 @@ CREATE TABLE role (
 );
 
 CREATE TABLE department (
-    id INT AUTO_INCREMENT NOT NULL;
+    id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(30),
     PRIMARY KEY(id)
 );

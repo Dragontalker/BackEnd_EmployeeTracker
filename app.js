@@ -9,5 +9,5 @@ const testApp = async () => {
     showRoles();
 };
 
-testApp();
+showRoles();
 

@@ -7,13 +7,11 @@ const addEmployee = require('./src/addEmployee');
 const getRoleId = require('./src/getRoleId');
 const updateRoleById = require('./src/updateRoleById');
 
-getRoleId('Lead Engineer')
-    .then ((results) => {
-        console.log(results);
-    })
-    .catch((error) => {
-        console.log(`Promise rejection error: ${error}`);
-    });
+const testId = async () => {
+    let result = await getRoleId('Lead Engineer');
+    console.log(`The result is ${result}!`);
+};
 
+testId();
 
 

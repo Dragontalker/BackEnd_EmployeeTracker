@@ -8,7 +8,7 @@ const getRoleId = (newRole) => {
             if (rows === undefined) {
                 reject(new Error('Error row is undefined'));
             } else {
-                resolve(rows);
+                resolve(rows[0].id);
             }
         });
     });

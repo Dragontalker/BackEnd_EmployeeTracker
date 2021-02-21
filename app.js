@@ -4,12 +4,14 @@ const viewEmployees = require('./src/viewEmployees');
 const addDepartment = require('./src/addDepartment');
 const addRole = require('./src/addRole');
 const addEmployee = require('./src/addEmployee');
-const updateRole = require('./src/updateRole');
+const updateRoleById = require('./src/updateRoleById');
 
 const testApp = async () => {
-    await addEmployee('Richard', 'Yang', 4);
+    await updateRoleById('Tom', 'Allen', 7);
     viewEmployees();
 };
 
-updateRole('Richard Yang', 'Sales Lead');
+testApp();
+
+
 

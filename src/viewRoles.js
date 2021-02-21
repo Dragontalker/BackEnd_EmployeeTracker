@@ -1,17 +1,11 @@
+const cTable = require('console.table');
 const connectDb = require('./connection');
 
-const viewRoles = (title, salary, departmentId) => {
-    let post = { 
-        title: `${title}`,
-        salary: `${salary}`,
-        department_id: `${departmentId}`
-    };
-    let sql = `INSERT INTO roles SET ?`;
-    connectDb.query(sql, post, (error, result) => {
+const viewRoles = () => {
+    let sql = 'SELECT * FROM roles';
+    connectDb.query(sql, (error, result) => {
         if (error) throw error;
-        console.log(`New role: ${title} has been added to database.`);
-        console.log(`The department ID is ${departmentId}.`);
-        console.log(`With salary: ${salary}.`);
+        console.table(result);
     });
 };
 

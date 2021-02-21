@@ -1,12 +1,14 @@
 const cTable = require('console.table');
 const connectDb = require('./connection');
 
-const viewEmployees = () => {
+const db = connectDb();
+
+const viewEmployees = async () => {
     let sql = 'SELECT * FROM employees';
-    connectDb.query(sql, (error, rows, fields) => {
-        if (error) throw error;
-        console.table(rows);
-    });
+    let result = await db.query(sql)
+    console.table(result);
 };
+
+viewEmployees();
 
 module.exports = viewEmployees;

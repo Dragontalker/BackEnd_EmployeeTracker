@@ -30,17 +30,18 @@ class Database {
     }
 };
 
-const connectDb = (dbName, dbPassword) => {
+const connectDb = () => {
     const db = new Database({
         host: 'localhost',
         port: 3306,
         user: 'root',
-        password: dbPassword,
-        database: dbName
+        password: 'sql23248265YT',
+        database: 'employee_db'
     });
     return db;
 }; 
 
+console.log(connectDb().query);
 
 // const connectDb = mysql.createConnection({
 //     host: 'localhost',

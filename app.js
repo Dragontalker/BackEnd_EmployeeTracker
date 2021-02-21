@@ -8,7 +8,7 @@ const getRoleId = require('./src/getRoleId');
 const updateRoleById = require('./src/updateRoleById');
 
 const testId = async () => {
-    let result = await getRoleId('Lead Engineer');
+    let result = await getRoleId('Lawyer');
     console.log(`The result is ${result}!`);
 };
 

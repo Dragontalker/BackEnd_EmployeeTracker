@@ -11,4 +11,4 @@ const showRoles = () => {
     );
 };
 
-module.exports = showRules;
+module.exports = showRoles;

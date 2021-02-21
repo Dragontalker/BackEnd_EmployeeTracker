@@ -13,7 +13,7 @@ CREATE TABLE employee (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE role (
+CREATE TABLE roles (
     id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(30),
     salary DECIMAL(10, 2),

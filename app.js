@@ -4,16 +4,16 @@ const viewEmployees = require('./src/viewEmployees');
 const addDepartment = require('./src/addDepartment');
 const addRole = require('./src/addRole');
 const addEmployee = require('./src/addEmployee');
-const updateRole = require('./src/updateRole');
+const getRoleId = require('./src/getRoleId');
 const updateRoleById = require('./src/updateRoleById');
 
-const testApp = async () => {
-    await updateRoleById('Tom',  'Allen', 4);
-    viewEmployees();
-};
-
-testApp();
-
+getRoleId('Lead Engineer')
+    .then ((results) => {
+        console.log(results);
+    })
+    .catch((error) => {
+        console.log(`Promise rejection error: ${error}`);
+    });
 
 
 

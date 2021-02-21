@@ -1,6 +1,6 @@
 const connectDb = require('./connection');
 
-const viewRole = (title, salary, departmentId) => {
+const viewRoles = (title, salary, departmentId) => {
     let post = { 
         title: `${title}`,
         salary: `${salary}`,
@@ -15,4 +15,4 @@ const viewRole = (title, salary, departmentId) => {
     });
 };
 
-module.exports = viewRole;
+module.exports = viewRoles;

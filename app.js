@@ -4,7 +4,7 @@ const showEmployees = require('./src/showEmployees');
 const addDepartment = require('./src/addDepartment');
 
 const testApp = async () => {
-    await addDepartment('Marketing');
+    await addDepartment('Human Resource');
     showDepartments();
 };
 

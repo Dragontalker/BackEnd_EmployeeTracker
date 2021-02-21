@@ -9,3 +9,6 @@ VALUES ('Ashley', 'Rodriguez', 3);
 
 INSERT INTO employees (first_name, last_name, role_id)
 VALUES ('Kevin', 'Tupik', 4);
+
+INSERT INTO employees (first_name, last_name, role_id)
+VALUES ('Malia', 'Brown', 5);

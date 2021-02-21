@@ -7,3 +7,8 @@ const connectDb = mysql.createConnection({
     password: 'sql23248265YT',
     database: 'employee_db'
 });
+
+connectDb.connect((error) => {
+    if (error) throw error;
+    console.log('MySQL database connected...');
+});

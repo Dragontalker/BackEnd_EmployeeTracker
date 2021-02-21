@@ -6,7 +6,6 @@ const addDepartment = (department) => {
     let sql = `INSERT INTO departments SET ?`;
     connectDb.query(sql, post, (error, result) => {
         if (error) throw error;
-        console.table(result);
     });
 };
 

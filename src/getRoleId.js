@@ -1,7 +1,7 @@
 const connectDb = require('./connection');
 
-const getRoleId = (newRole) => {
-    let sql = `SELECT id FROM roles WHERE title = '${newRole}'`;
+const getRoleId = (roleName) => {
+    let sql = `SELECT id FROM roles WHERE title = '${roleName}'`;
     return new Promise((resolve, reject) => {
         connectDb.query(sql, async (error, rows) => {
             if (rows === undefined) {

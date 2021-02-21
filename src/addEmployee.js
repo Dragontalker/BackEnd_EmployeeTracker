@@ -7,7 +7,7 @@ const addEmployee = (firstName, lastName, roleId) => {
         role_id: `${roleId}`
     };
     let sql = `INSERT INTO employees SET ?`;
-    connectDb.query(sql, post, (error, result) => {
+    connectDb.query(sql, post, (error, rows, fields) => {
         if (error) throw error;
         console.log(`New employee: ${firstName} ${lastName} has been added to database.`);
         console.log(`The role ID is ${roleId}.`);

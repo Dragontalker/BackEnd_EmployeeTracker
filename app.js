@@ -1,4 +1,4 @@
-const showDepartments = require('./src/showDepartments')
+const viewDepartments = require('./src/viewDepartments')
 const showRoles = require('./src/showRoles');
 const showEmployees = require('./src/showEmployees');
 const addDepartment = require('./src/addDepartment');

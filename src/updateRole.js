@@ -1,4 +1,5 @@
 const connectDb = require('./connection');
+const updateRoleById = require('./updateRoleById');
 
 const updateRole = (name, newRole) => {
     let sql = `SELECT id FROM roles WHERE title = '${newRole}'`;
@@ -6,8 +7,7 @@ const updateRole = (name, newRole) => {
         if (error) throw error;
         let id = rows[0].id;
         let [ firstName, lastName] = name.split(' ');
-        let sql = `UPDATE employees SET role_id = ${id} WHERE first_name = ${firstName} AND last_name = ${lastName}`;
-        
+        updateRoleById(firstName, lastName, id);
     });
 };
 

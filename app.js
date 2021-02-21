@@ -1,8 +1,8 @@
 const viewDepartments = require('./src/viewDepartments')
-const showRoles = require('./src/showRoles');
+const viewRoles = require('./src/viewRoles');
 const showEmployees = require('./src/showEmployees');
 const addDepartment = require('./src/addDepartment');
-const addRole = require('./src/addRole');
+const addRole = require('./src/viewRole');
 const addEmployee = require('./src/addEmployee');
 
 const testApp = async () => {

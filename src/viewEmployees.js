@@ -1,7 +1,7 @@
 const cTable = require('console.table');
 const connectDb = require('./connection');
 
-const showEmployees = () => {
+const viewEmployees = () => {
     let sql = 'SELECT * FROM employees';
     connectDb.query(sql, (error, result) => {
         if (error) throw error;
@@ -9,4 +9,4 @@ const showEmployees = () => {
     });
 };
 
-module.exports = showEmployees;
+module.exports = viewEmployees;

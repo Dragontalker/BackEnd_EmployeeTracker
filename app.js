@@ -1,6 +1,6 @@
 const viewDepartments = require('./src/viewDepartments')
 const viewRoles = require('./src/viewRoles');
-const showEmployees = require('./src/showEmployees');
+const viewEmployees = require('./src/viewEmployees');
 const addDepartment = require('./src/addDepartment');
 const addRole = require('./src/viewRole');
 const addEmployee = require('./src/addEmployee');

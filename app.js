@@ -7,7 +7,8 @@ const showDepartment = () => {
         function(error, result) {
             if (error) throw error;
             console.table(result);
-        });
+        }
+    );
 };
 
 showDepartment();

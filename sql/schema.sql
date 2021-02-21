@@ -4,7 +4,7 @@ CREATE DATABASE employee_db;
 
 USE employee_db;
 
-CREATE TABLE employee (
+CREATE TABLE employees (
     id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
@@ -21,7 +21,7 @@ CREATE TABLE roles (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE department (
+CREATE TABLE departments (
     id INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(30),
     PRIMARY KEY(id)

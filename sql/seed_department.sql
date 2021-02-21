@@ -1,11 +1,11 @@
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Sales');
 
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Engineering');
 
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Finance');
 
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Legal');

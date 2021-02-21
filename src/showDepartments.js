@@ -3,7 +3,7 @@ const connectDb = require('./connection');
 
 const showDepartment = () => {
     connectDb.query(
-        'SELECT * FROM department', 
+        'SELECT * FROM departments', 
         function(error, result) {
             if (error) throw error;
             console.table(result);

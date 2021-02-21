@@ -9,6 +9,4 @@ const viewEmployees = async () => {
     console.table(result);
 };
 
-viewEmployees();
-
 module.exports = viewEmployees;

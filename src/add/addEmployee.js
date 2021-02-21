@@ -1,4 +1,4 @@
-const connectDb = require('./connection');
+const connectDb = require('../connection');
 
 const addEmployee = (firstName, lastName, roleId) => {
     let post = { 

@@ -1,4 +1,4 @@
-const connectDb = require('./connection');
+const connectDb = require('../connection');
 
 const addDepartment = (department) => {
     let post = { name: `${department}`};

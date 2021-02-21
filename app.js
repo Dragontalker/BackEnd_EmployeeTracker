@@ -2,12 +2,13 @@ const showDepartments = require('./src/showDepartments')
 const showRoles = require('./src/showRoles');
 const showEmployees = require('./src/showEmployees');
 const addDepartment = require('./src/addDepartment');
-const addRole = require('./src/addRole')
+const addRole = require('./src/addRole');
+const addEmployee = require('./src/addEmployee');
 
 const testApp = async () => {
-    await addRole('Junior Software Engineer', 105000, 2);
-    showRoles();
+    await addEmployee('Richard', 'Yang', 4);
+    showEmployees();
 };
 
-showRoles();
+testApp();
 

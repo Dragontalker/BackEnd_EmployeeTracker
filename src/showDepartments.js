@@ -1,7 +1,7 @@
 const cTable = require('console.table');
 const connectDb = require('./connection');
 
-const showDepartment = () => {
+const showDepartments = () => {
     connectDb.query(
         'SELECT * FROM departments', 
         function(error, result) {
@@ -11,4 +11,4 @@ const showDepartment = () => {
     );
 };
 
-module.exports = showDepartment;
+module.exports = showDepartments;

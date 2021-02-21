@@ -1,5 +1,5 @@
-const showDepartment = require('./src/showDepartments')
+const showDepartments = require('./src/showDepartments')
 
-showDepartment();
+showDepartments();
 
 

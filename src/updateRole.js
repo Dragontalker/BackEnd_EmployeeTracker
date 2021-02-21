@@ -7,7 +7,8 @@ const updateRole = (name, newRole) => {
         if (error) throw error;
         let id = rows[0].id;
         let [ firstName, lastName] = name.split(' ');
-        updateRoleById(firstName, lastName, id);
+        // updateRoleById(firstName, lastName, id);
+        console.log(`id: ${id}, firstName: ${firstName}, lastName: ${lastName}`);
     });
 };
 

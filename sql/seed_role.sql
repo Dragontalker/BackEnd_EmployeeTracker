@@ -11,6 +11,9 @@ INSERT INTO role (title, salary, department_id)
 VALUE ('Software Engineer', 120000, 2);
 
 INSERT INTO role (title, salary, department_id)
+VALUE ('Accountant', 125000, 3);
+
+INSERT INTO role (title, salary, department_id)
 VALUE ('Lawyer', 190000, 4);
 
 INSERT INTO role (title, salary, department_id)

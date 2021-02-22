@@ -21,12 +21,4 @@ const inqAddRole = (array) => {
     ])
 };
 
-const test = async () => {
-    let arr = ['IT', 'Marketing']
-    let result = await inqAddRole(arr);
-    console.log(result);
-}
-
-test();
-
 module.exports = inqAddRole;

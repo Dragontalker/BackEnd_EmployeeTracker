@@ -28,6 +28,10 @@ const initApp = async () => {
             console.table(await viewDepartments());
             initApp();
             break;
+        case 'View All Roles':
+            console.table(await viewRoles());
+            initApp();
+            break;
         default:
             break;
     }

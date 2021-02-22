@@ -21,7 +21,7 @@ const inqMain = () => {
             'View Department Budget',
             'Exit'
         ]
-    })
+    });
 }
 
 module.exports = inqMain;

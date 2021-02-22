@@ -21,6 +21,7 @@ const getEmployeeId = require('./src/get/getEmployeeId');
 
 // require modules located under ./src/inquirer
 const inqMain = require('./src/inquirer/inqMain');
+const inqAddDepartment = require('./src/inquirer/inqAddDepartment');
 
 const initApp = async () => {
     let input = await inqMain();
@@ -36,6 +37,12 @@ const initApp = async () => {
             break;
         case 'View All Employees':
             console.table(await viewEmployees());
+            initApp();
+            break;
+        case 'Add Department':
+            let newDepartmentName = await inqAddDepartment();
+            await addDepartment(newDepartmentName.name);
+            console.log(await viewDepartments());
             initApp();
             break;
         default:

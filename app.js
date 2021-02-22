@@ -56,6 +56,9 @@ const initApp = async () => {
             console.table(await viewRoles());
             initApp();
             break;
+        case 'Add Employee':
+            initApp();
+            break;
         default:
             break;
     }

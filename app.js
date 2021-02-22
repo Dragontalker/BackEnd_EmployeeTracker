@@ -45,6 +45,9 @@ const initApp = async () => {
             console.log(await viewDepartments());
             initApp();
             break;
+        case 'Add Role':
+            initApp();
+            break;
         default:
             break;
     }

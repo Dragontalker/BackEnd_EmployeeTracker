@@ -6,8 +6,16 @@ const getDepartmentNames = async () => {
     let sql = 'SELECT DISTINCT name FROM departments';
     let result = await db.query(sql);
     await db.close();
-    return result;
+    return result.map(obj => obj.name);
 };
 
+
+// Test
+const test = async () => {
+    let arr = await getDepartmentNames();
+    console.log(arr);
+}
+
+test();
 
 module.exports = getDepartmentNames;

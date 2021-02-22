@@ -13,6 +13,7 @@ const addEmployee = require('./src/add/addEmployee');
 
 const updateRoleById = require('./src/updateRoleById');
 const getNameArrays = require('./src/get/getNameArrays');
+const getRoleNames = require('./src/get/getRoleNames');
 
 const connectDb = require('./src/connection');
 const getRoleId = require('./src/get/getRoleId');
@@ -69,6 +70,7 @@ const initApp = async () => {
 
         // Option 6
         case 'Add Employee':
+            console.log(await getRoleNames());
             initApp();
             break;
 

@@ -12,9 +12,8 @@ db = connectDb();
 const testApp = async () => {
     let result = await db.getRoleId('Lead Engineer');
     await db.close();
-    console.log(`The result is ${result}!`);
+    return result;
 }
 
-testApp();
 
 

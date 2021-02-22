@@ -1,4 +1,4 @@
-const connectDb = require('./connection');
+const connectDb = require('../connection');
 
 const getRoleId = (roleName) => {
     let sql = `SELECT id FROM roles WHERE title = '${roleName}'`;

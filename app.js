@@ -11,6 +11,11 @@ const connectDb = require('./src/connection');
 
 db = connectDb();
 
-getNameArrays();
+const testApp = async () => {
+    let result = await getNameArrays();
+    console.log(result);
+};
+
+testApp();
 
 

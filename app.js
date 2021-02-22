@@ -20,16 +20,16 @@ const initApp = async () => {
     let input = await inqMain();
     
     switch(input.action) {
-        case 'View All Employees':
-            console.table(await viewEmployees());
-            initApp();
-            break;
         case 'View All Departments':
             console.table(await viewDepartments());
             initApp();
             break;
         case 'View All Roles':
             console.table(await viewRoles());
+            initApp();
+            break;
+        case 'View All Employees':
+            console.table(await viewEmployees());
             initApp();
             break;
         default:

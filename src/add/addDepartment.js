@@ -1,12 +1,12 @@
 const connectDb = require('../connection');
 
-const addDepartment = (department) => {
+const db = connectDb();
+
+const addDepartment = async (department) => {
     let post = { name: `${department}`};
     let sql = `INSERT INTO departments SET ?`;
-    connectDb.query(sql, post, (error, rows, fields) => {
-        if (error) throw error;
-        console.log(`New department: ${department} has been added to database.`);
-    });
+    await connectDb.query(sql, post);
+    await db.close();
 };
 
 module.exports = addDepartment;

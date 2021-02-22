@@ -6,19 +6,19 @@ const main = () => {
         type: 'list',
         message: 'What would you like to do?',
         choices: [
-            'View All Employees',
             'View All Departments',
             'View All Roles',
-            'View All Employees by Department',
-            'View All Employee by Manager',
-            'Addd Employee',
-            'Remove Employee',
+            'View All Employees',
+            'Add Department',
+            'Add Employee',
+            'Add Role',
             'Update Employee Role',
             'Update Employee Manager',
-            'Add Role',
-            'Remove Role',
-            'Add Department',
+            'View All Employee by Manager',
             'Remove Department',
+            'Remove Role',
+            'Remove Employee',
+            'View Department Budget',
             'Exit'
         ]
     })

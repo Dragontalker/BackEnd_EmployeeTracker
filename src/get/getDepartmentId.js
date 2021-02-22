@@ -9,12 +9,4 @@ const getDepartmentId = async (departmentName) => {
     return result[0].id;
 };
 
-// Test:
-const test = async(name) => {
-    let result = await getDepartmentId(name);
-    console.log(`The id is ${result}`);
-}
-
-test('Finance');
-
 module.exports = getDepartmentId;

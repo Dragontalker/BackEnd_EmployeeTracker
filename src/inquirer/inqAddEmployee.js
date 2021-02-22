@@ -27,15 +27,4 @@ const inqAddEmployee = (roleArray, managerArray) => {
     ]);
 };
 
-// Test
-let test1 = ['Data Scientist', 'Scrum Master'];
-let test2 = ['Richard Yang', 'Cora Zhang'];
-
-const test = async () => {
-    let result = await inqAddEmployee(test1, test2);
-    console.log(result);
-};
-
-test();
-
 module.exports = inqAddEmployee;

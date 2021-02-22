@@ -6,8 +6,8 @@ const db = connectDb();
 const viewEmployees = async () => {
     let sql = 'SELECT * FROM employees';
     let result = await db.query(sql);
-    console.table(result);
     await db.close();
+    return result;
 };
 
 module.exports = viewEmployees;

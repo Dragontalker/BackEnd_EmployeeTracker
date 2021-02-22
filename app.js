@@ -1,3 +1,5 @@
+const cTable = require('console.table');
+
 const viewDepartments = require('./src/view/viewDepartments')
 const viewRoles = require('./src/view/viewRoles');
 const viewEmployees = require('./src/view/viewEmployees');
@@ -16,7 +18,16 @@ const inqMain = require('./src/inquirer/inqMain');
 
 const initApp = async () => {
     let result = await inqMain();
-    console.log(result.action);
+    
+    switch(result.action) {
+        case 'View All Employees':
+            let result = await viewEmployees();
+            console.table(result);
+            initApp();
+            break;
+        default:
+            break;
+    }
 };
 
 initApp();

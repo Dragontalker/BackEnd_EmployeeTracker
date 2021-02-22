@@ -12,12 +12,12 @@ const getRoleId = require('./src/get/getRoleId');
 const getManagerNames = require('./src/get/getManagerNames');
 const getEmployeeId = require('./src/get/getEmployeeId');
 
-db = connectDb();
+const inqMain = require('./src/inquirer/inqMain');
 
-const testApp = async (name) => {
-    let result = await getEmployeeId(name);
-    console.log(`The employee ID for ${name} is ${result}!`);
-}
+const initApp = async () => {
+    let result = await inqMain();
+    console.log(result.action);
+};
 
-testApp('Sarah Lourd');
+initApp();
 

@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 
 const inqAddRole = (array) => {
-    return inquirer.prompt(
+    return inquirer.prompt([
         {
             name: "title",
             type: "input",
@@ -18,7 +18,15 @@ const inqAddRole = (array) => {
             message: "Which department does this new role belong to?",
             choices: array
         }
-    )
+    ])
 };
+
+const test = async () => {
+    let arr = ['IT', 'Marketing']
+    let result = await inqAddRole(arr);
+    console.log(result);
+}
+
+test();
 
 module.exports = inqAddRole;

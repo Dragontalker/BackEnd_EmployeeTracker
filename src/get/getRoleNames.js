@@ -9,12 +9,4 @@ const getRoleNames = async () => {
     return result.map(obj => obj.title);
 };
 
-// Test
-const test = async () => {
-    let results = await getRoleNames();
-    console.log(results);
-}
-
-test();
-
 module.exports = getRoleNames;

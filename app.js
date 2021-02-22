@@ -52,7 +52,8 @@ const initApp = async () => {
             let departmentNames = await getDepartmentNames();
             let { title, salary, department } = await inqAddRole(departmentNames);
             let id = await getDepartmentId(department);
-            console.log(`Title: ${title}, Salary: ${salary}, departId:${id}`);
+            await addRole(title, salary, id);
+            console.table(await viewRoles());
             initApp();
             break;
         default:

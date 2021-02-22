@@ -70,7 +70,10 @@ const initApp = async () => {
 
         // Option 6
         case 'Add Employee':
-            console.log(await getRoleNames());
+            let roleArray = await getRoleNames();
+            let managerArray = await getManagerNames();
+            console.log(`Role list: ${roleArray}`);
+            console.log(`Manager list: ${managerArray}`);
             initApp();
             break;
 

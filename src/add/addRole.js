@@ -2,7 +2,7 @@ const connectDb = require('../connection');
 
 const db = connectDb();
 
-const addRoles = async (title, salary, departmentId) => {
+const addRole = async (title, salary, departmentId) => {
     let post = { 
         title: `${title}`,
         salary: `${salary}`,
@@ -13,4 +13,4 @@ const addRoles = async (title, salary, departmentId) => {
     await db.close();
 };
 
-module.exports = addRoles;
+module.exports = addRole;

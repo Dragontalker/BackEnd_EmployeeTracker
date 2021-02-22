@@ -7,7 +7,7 @@ const addEmployee = require('./src/add/addEmployee');
 const getRoleId = require('./src/getRoleId');
 const updateRoleById = require('./src/updateRoleById');
 
-
+addRole('Data Scientiest', 200000, 2)
 viewRoles();
 
 

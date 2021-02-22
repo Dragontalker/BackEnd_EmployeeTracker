@@ -21,10 +21,4 @@ const main = () => {
     })
 }
 
-// Test: 
-const testApp = async () => {
-    let result = await main();
-    console.log(result.action);
-}
-
-testApp();
+module.exports = main;

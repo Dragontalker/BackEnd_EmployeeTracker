@@ -25,7 +25,9 @@ const getDepartmentId = require('./src/get/getDepartmentId');
 const inqMain = require('./src/inquirer/inqMain');
 const inqAddDepartment = require('./src/inquirer/inqAddDepartment');
 const inqAddRole = require('./src/inquirer/inqAddRole');
+const inqAddEmployee = require('./src/inquirer/inqAddEmployee');
 const getDepartmentNames = require('./src/get/getDepartmentNames');
+
 
 const initApp = async () => {
     let input = await inqMain();
@@ -72,8 +74,8 @@ const initApp = async () => {
         case 'Add Employee':
             let roleArray = await getRoleNames();
             let managerArray = await getManagerNames();
-            console.log(`Role list: ${roleArray}`);
-            console.log(`Manager list: ${managerArray}`);
+            let { firstName, lastName, role, manager } = await inqAddEmployee(roleArray, managerArray);
+            console.log(`First_name: ${firstName}, Last_name: ${lastName}, Role: ${role}, Manager: ${manager}`);
             initApp();
             break;
 

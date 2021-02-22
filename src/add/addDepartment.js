@@ -5,7 +5,7 @@ const db = connectDb();
 const addDepartment = async (department) => {
     let post = { name: `${department}`};
     let sql = `INSERT INTO departments SET ?`;
-    await connectDb.query(sql, post);
+    await db.query(sql, post);
     await db.close();
 };
 

@@ -9,7 +9,7 @@ const addRole = async (title, salary, departmentId) => {
         department_id: `${departmentId}`
     };
     let sql = `INSERT INTO roles SET ?`;
-    await db.query(sql, post, );
+    await db.query(sql, post);
     await db.close();
 };
 

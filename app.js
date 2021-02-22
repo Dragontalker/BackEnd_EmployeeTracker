@@ -17,12 +17,15 @@ const getEmployeeId = require('./src/get/getEmployeeId');
 const inqMain = require('./src/inquirer/inqMain');
 
 const initApp = async () => {
-    let result = await inqMain();
+    let input = await inqMain();
     
-    switch(result.action) {
+    switch(input.action) {
         case 'View All Employees':
-            let result = await viewEmployees();
-            console.table(result);
+            console.table(await viewEmployees());
+            initApp();
+            break;
+        case 'View All Departments':
+            console.table(await viewDepartments());
             initApp();
             break;
         default:

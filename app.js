@@ -18,6 +18,7 @@ const connectDb = require('./src/connection');
 const getRoleId = require('./src/get/getRoleId');
 const getManagerNames = require('./src/get/getManagerNames');
 const getEmployeeId = require('./src/get/getEmployeeId');
+const getDepartmentId = require('./src/get/getDepartmentId');
 
 // require modules located under ./src/inquirer
 const inqMain = require('./src/inquirer/inqMain');
@@ -50,7 +51,8 @@ const initApp = async () => {
         case 'Add Role':
             let departmentNames = await getDepartmentNames();
             let { title, salary, department } = await inqAddRole(departmentNames);
-            console.log(`Title: ${title}, Salary: ${salary}, ${department}`);
+            let id = await getDepartmentId(department);
+            console.log(`Title: ${title}, Salary: ${salary}, departId:${id}`);
             initApp();
             break;
         default:

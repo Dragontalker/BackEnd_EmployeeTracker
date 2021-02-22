@@ -1,12 +1,12 @@
-getRoleId(roleName) {
+const connectDb = require('../connection');
+
+const db = connectDb();
+
+const getRoleId = async (roleName) => {
     let sql = `SELECT id FROM roles WHERE title = '${roleName}'`; 
-    return new Promise((resolve, reject) => {
-        this.connection.query(sql, (error, rows) => {
-            if (rows === undefined) {
-                reject(new Error('Error row is undefined'));
-            } else {
-                resolve(rows[0].id);
-            };
-        });
-    });
-}
+    let result = await db.query(sql);
+    await db.close();
+    return result[0].id;
+};
+
+module.exports = getRoleId;

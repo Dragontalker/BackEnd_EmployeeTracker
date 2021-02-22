@@ -10,12 +10,14 @@ const getNameArrays = require('./src/get/getNameArrays');
 const connectDb = require('./src/connection');
 const getRoleId = require('./src/get/getRoleId');
 const getManagerNames = require('./src/get/getManagerNames');
+const getEmployeeId = require('./src/get/getEmployeeId');
 
 db = connectDb();
 
-let test = "Richard Yang";
-let [ firstName, lastName ] = test.split(' ');
-console.log(firstName);
-console.log(lastName);
+const testApp = async (name) => {
+    let result = await getEmployeeId(name);
+    console.log(`The employee ID for ${name} is ${result}!`);
+}
 
+testApp('Sarah Lourd');
 

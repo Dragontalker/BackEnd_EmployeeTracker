@@ -14,12 +14,12 @@ const inqMain = () => {
             'Add Employee',
             'Update Employee Role',
             'Update Employee Manager',
+            'View All Employee by Department',
             'View All Employee by Manager',
             'Remove Department',
             'Remove Role',
             'Remove Employee',
             'View Department Budget',
-            'Exit'
         ]
     });
 }

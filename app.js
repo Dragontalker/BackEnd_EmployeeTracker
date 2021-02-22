@@ -1,11 +1,16 @@
 const cTable = require('console.table');
 
+// require modules located under ./src/view
 const viewDepartments = require('./src/view/viewDepartments')
 const viewRoles = require('./src/view/viewRoles');
 const viewEmployees = require('./src/view/viewEmployees');
+
+// require modules located under ./src/add
 const addDepartment = require('./src/add/addDepartment');
 const addRole = require('./src/add/addRole');
 const addEmployee = require('./src/add/addEmployee');
+
+
 const updateRoleById = require('./src/updateRoleById');
 const getNameArrays = require('./src/get/getNameArrays');
 
@@ -14,6 +19,7 @@ const getRoleId = require('./src/get/getRoleId');
 const getManagerNames = require('./src/get/getManagerNames');
 const getEmployeeId = require('./src/get/getEmployeeId');
 
+// require modules located under ./src/inquirer
 const inqMain = require('./src/inquirer/inqMain');
 
 const initApp = async () => {

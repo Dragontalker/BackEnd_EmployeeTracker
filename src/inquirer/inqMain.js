@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-const main = () => {
+const inqMain = () => {
     return inquirer.prompt({
         name: 'action',
         type: 'list',
@@ -24,4 +24,4 @@ const main = () => {
     })
 }
 
-module.exports = main;
+module.exports = inqMain;

@@ -30,24 +30,34 @@ const initApp = async () => {
     let input = await inqMain();
     
     switch(input.action) {
+
+        // Option 1
         case 'View All Departments':
             console.table(await viewDepartments());
             initApp();
             break;
+
+        // Option 2
         case 'View All Roles':
             console.table(await viewRoles());
             initApp();
             break;
+
+        // Option 3
         case 'View All Employees':
             console.table(await viewEmployees());
             initApp();
             break;
+
+        // Option 4
         case 'Add Department':
             let newDepartmentName = await inqAddDepartment();
             await addDepartment(newDepartmentName.name);
             console.log(await viewDepartments());
             initApp();
             break;
+
+        // Opetion 5
         case 'Add Role':
             let departmentNames = await getDepartmentNames();
             let { title, salary, department } = await inqAddRole(departmentNames);
@@ -56,6 +66,8 @@ const initApp = async () => {
             console.table(await viewRoles());
             initApp();
             break;
+
+        // Option 6
         case 'Add Employee':
             initApp();
             break;

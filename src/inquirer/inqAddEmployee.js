@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-const inqAddRole = (roleArray, managerArray) => {
+const inqAddEmployee = (roleArray, managerArray) => {
     return inquirer.prompt([
         {
             name: "firstName",
@@ -24,7 +24,18 @@ const inqAddRole = (roleArray, managerArray) => {
             message: "Who is the manager of this new employee?",
             choices: managerArray
         }
-    ])
+    ]);
 };
 
-module.exports = inqAddRole;
+// Test
+let test1 = ['Data Scientist', 'Scrum Master'];
+let test2 = ['Richard Yang', 'Cora Zhang'];
+
+const test = async () => {
+    let result = await inqAddEmployee(test1, test2);
+    console.log(result);
+};
+
+test();
+
+module.exports = inqAddEmployee;

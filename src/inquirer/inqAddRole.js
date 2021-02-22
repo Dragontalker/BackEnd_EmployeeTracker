@@ -18,7 +18,7 @@ const inqAddRole = (array) => {
             message: "Which department does this new role belong to?",
             choices: array
         }
-    ])
+    ]);
 };
 
 module.exports = inqAddRole;

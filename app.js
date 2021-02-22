@@ -84,8 +84,7 @@ const initApp = async () => {
             break;
 
         // Exit option
-        case 'Exit':
-            await db.close();
+        default:
             break;
     }
 };

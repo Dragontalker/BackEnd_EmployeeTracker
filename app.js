@@ -28,6 +28,7 @@ const inqAddRole = require('./src/inquirer/inqAddRole');
 const inqAddEmployee = require('./src/inquirer/inqAddEmployee');
 const getDepartmentNames = require('./src/get/getDepartmentNames');
 
+const db = connectDb();
 
 const initApp = async () => {
     let input = await inqMain();
@@ -75,12 +76,16 @@ const initApp = async () => {
             let roleArray = await getRoleNames();
             let managerArray = await getManagerNames();
             let { firstName, lastName, role, manager } = await inqAddEmployee(roleArray, managerArray);
-            console.log(`First_name: ${firstName}, Last_name: ${lastName}, Role: ${role}, Manager: ${manager}`);
+            let roleId = await getRoleId(role);
+            let managerId = await getEmployeeId(manager)
+            await addEmployee(firstName, lastName, roleId, managerId);
+            console.table(await viewEmployees());
             initApp();
             break;
 
         // Exit option
-        default:
+        case 'Exit':
+            await db.close();
             break;
     }
 };

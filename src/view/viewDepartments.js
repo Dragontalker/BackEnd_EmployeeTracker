@@ -7,7 +7,6 @@ const viewDepartments = async () => {
     let sql = 'SELECT * FROM departments';
     let result = await db.query(sql);
     console.table(result);
-    await db.close();
 };
 
 module.exports = viewDepartments;

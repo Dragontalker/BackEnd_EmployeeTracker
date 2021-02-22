@@ -1,18 +1,16 @@
 const connectDb = require('../connection');
 
-const addRoles = (title, salary, departmentId) => {
+const db = connectDb();
+
+const addRoles = async (title, salary, departmentId) => {
     let post = { 
         title: `${title}`,
         salary: `${salary}`,
         department_id: `${departmentId}`
     };
     let sql = `INSERT INTO roles SET ?`;
-    connectDb.query(sql, post, (error, rows, fields) => {
-        if (error) throw error;
-        console.log(`New role: ${title} has been added to database.`);
-        console.log(`The department ID is ${departmentId}.`);
-        console.log(`With salary: ${salary}.`);
-    });
+    await db.query(sql, post, );
+    await db.close();
 };
 
 module.exports = addRoles;

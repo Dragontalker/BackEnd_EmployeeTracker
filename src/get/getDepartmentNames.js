@@ -9,13 +9,4 @@ const getDepartmentNames = async () => {
     return result.map(obj => obj.name);
 };
 
-
-// Test
-const test = async () => {
-    let arr = await getDepartmentNames();
-    console.log(arr);
-}
-
-test();
-
 module.exports = getDepartmentNames;

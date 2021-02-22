@@ -13,11 +13,9 @@ const getManagerNames = require('./src/get/getManagerNames');
 
 db = connectDb();
 
-const testApp = async () => {
-    let result = await getManagerNames();
-    console.log(result);
-};
-
-testApp();
+let test = "Richard Yang";
+let [ firstName, lastName ] = test.split(' ');
+console.log(firstName);
+console.log(lastName);
 
 

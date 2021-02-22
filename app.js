@@ -71,6 +71,8 @@ const initApp = async () => {
         case 'Add Employee':
             initApp();
             break;
+
+        // Exit option
         default:
             break;
     }

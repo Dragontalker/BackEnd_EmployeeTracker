@@ -9,14 +9,15 @@ const getNameArrays = require('./src/get/getNameArrays');
 
 const connectDb = require('./src/connection');
 const getRoleId = require('./src/get/getRoleId');
+const getManagerNames = require('./src/get/getManagerNames');
 
 db = connectDb();
 
-const testApp = async (name) => {
-    let result = await getRoleId(name);
-    console.log(`The ID for role ${name} is ${result}`);
+const testApp = async () => {
+    let result = await getManagerNames();
+    console.log(result);
 };
 
-testApp('Lead Engineer');
+testApp();
 
 

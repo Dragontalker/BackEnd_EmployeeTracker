@@ -10,10 +10,11 @@ const connectDb = require('./src/connection');
 db = connectDb();
 
 const testApp = async () => {
-    let result = await db.getRoleId('Lead Engineer');
+    let result = await db.getNameArrays();
     await db.close();
-    return result;
+    console.log(result);
 }
 
+testApp();
 
 

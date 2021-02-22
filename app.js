@@ -83,6 +83,11 @@ const initApp = async () => {
             initApp();
             break;
 
+        // Option 7
+        case 'Update Employee Role':
+            initApp();
+            break;
+
         // Exit option
         default:
             break;

@@ -1,54 +1,58 @@
 const cTable = require('console.table');
 
-// require modules located under ./src/view
+// load modules located under ./src/view
 const viewDepartments = require('./src/view/viewDepartments')
 const viewRoles = require('./src/view/viewRoles');
 const viewEmployees = require('./src/view/viewEmployees');
 
-// require modules located under ./src/add
+// load modules located under ./src/add
 const addDepartment = require('./src/add/addDepartment');
 const addRole = require('./src/add/addRole');
 const addEmployee = require('./src/add/addEmployee');
 
-
-const updateRoleById = require('./src/update/updateRoleById');
+// load modules located under ./src/get
 const getNameArrays = require('./src/get/getNameArrays');
 const getRoleNames = require('./src/get/getRoleNames');
-
-const connectDb = require('./src/connection');
 const getRoleId = require('./src/get/getRoleId');
 const getManagerNames = require('./src/get/getManagerNames');
 const getEmployeeId = require('./src/get/getEmployeeId');
 const getDepartmentId = require('./src/get/getDepartmentId');
+const getDepartmentNames = require('./src/get/getDepartmentNames');
 
-// require modules located under ./src/inquirer
+// load modules located under ./src/update
+const updateRoleById = require('./src/update/updateRoleById');
+const updateManager = require('./src/update/updateManager');
+const updateDepartment = require('./src/update/updateDepartment');
+
+// load modules located under ./src/inquirer
 const inqMain = require('./src/inquirer/inqMain');
 const inqAddDepartment = require('./src/inquirer/inqAddDepartment');
 const inqAddRole = require('./src/inquirer/inqAddRole');
 const inqAddEmployee = require('./src/inquirer/inqAddEmployee');
-const getDepartmentNames = require('./src/get/getDepartmentNames');
 const inqUpdateRole = require('./src/inquirer/inqUpdateRole');
 const inqUpdateManager = require('./src/inquirer/inqUpdateManager');
-const updateManager = require('./src/update/updateManager');
 const inqUpdateDepartment = require('./src/inquirer/inqUpdateDepartment');
-const updateDepartment = require('./src/update/updateDepartment');
 const inqViewEmployeeByDepartment = require('./src/inquirer/inqViewEmployeeByDepartment');
-const viewEmployeeByDepartment = require('./src/view/viewEmployeeByDepartment');
 const inqViewEmployeeByManager = require('./src/inquirer/inqViewEmployeeByManager');
-const viewEmployeeByManager = require('./src/view/viewEmployeeByManager');
 const inqRemoveDepartment = require('./src/inquirer/inqRemoveDepartment');
-const removeDepartment = require('./src/remove/removeDepartment');
 const inqRemoveRole = require('./src/inquirer/inqRemoveRole');
-const removeRole = require('./src/remove/removeRole');
 const inqRemoveEmployee = require('./src/inquirer/inqRemoveEmployee');
+
+// load modules located under ./src/view
+const viewEmployeeByDepartment = require('./src/view/viewEmployeeByDepartment');
+const viewEmployeeByManager = require('./src/view/viewEmployeeByManager');
+
+// load modules located under ./src/remove
+const removeDepartment = require('./src/remove/removeDepartment');
+const removeRole = require('./src/remove/removeRole');
 const removeEmployee = require('./src/remove/removeEmployee');
+
+// load modules located under ./src/calculate
 const calculateDepartmentBudget = require('./src/calculate/calculateDepartmentBudget');
 
-const db = connectDb();
 
 const initApp = async () => {
     let input = await inqMain();
-    
     switch(input.action) {
 
         // Option 1

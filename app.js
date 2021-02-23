@@ -169,6 +169,8 @@ const initApp = async () => {
 
         // Opetion 14
         case 'Remove Employee':
+            let nameArray14 = await getNameArrays();
+            console.log(nameArray14);
             initApp();
             break;
 

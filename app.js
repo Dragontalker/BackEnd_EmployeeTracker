@@ -134,6 +134,11 @@ const initApp = async () => {
             initApp();
             break;
 
+        // Option 11
+        case 'View All Employees by Manager':
+            initApp();
+            break;
+
         // Exit option
         default:
             break;

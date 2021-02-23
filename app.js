@@ -11,7 +11,7 @@ const addRole = require('./src/add/addRole');
 const addEmployee = require('./src/add/addEmployee');
 
 
-const updateRoleById = require('./src/updateRoleById');
+const updateRoleById = require('./src/update/updateRoleById');
 const getNameArrays = require('./src/get/getNameArrays');
 const getRoleNames = require('./src/get/getRoleNames');
 

@@ -18,11 +18,3 @@ const inqUpdateRole = (employeeArray, roleArray) => {
 };
 
 module.exports = inqUpdateRole;
-
-// Test
-const test = async () => {
-    let result = await inqUpdateRole(['Richard Yang', 'Cora Zhang'], ['RA', 'TA']);
-    console.log(result);
-}
-
-test();

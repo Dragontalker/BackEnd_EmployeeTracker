@@ -28,6 +28,7 @@ const inqAddRole = require('./src/inquirer/inqAddRole');
 const inqAddEmployee = require('./src/inquirer/inqAddEmployee');
 const getDepartmentNames = require('./src/get/getDepartmentNames');
 const inqUpdateRole = require('./src/inquirer/inqUpdateRole');
+const inqUpdateManager = require('./src/inquirer/inqUpdateManager');
 
 const db = connectDb();
 
@@ -100,8 +101,9 @@ const initApp = async () => {
         case 'Update Employee Manager':
             let employeeArray8 = await getNameArrays();
             let managerArray8 = await getManagerNames();
-            console.log(employeeArray8);
-            console.log(managerArray8);
+            let result8 = await inqUpdateManager(employeeArray8, managerArray8);
+            console.log(result8.fullName);
+            console.log(result8.manager);
             initApp();
             break;
 

@@ -102,8 +102,9 @@ const initApp = async () => {
             let employeeArray8 = await getNameArrays();
             let managerArray8 = await getManagerNames();
             let result8 = await inqUpdateManager(employeeArray8, managerArray8);
-            console.log(result8.fullName);
-            console.log(result8.manager);
+            let [ firstName8, lastName8 ] = result8.fullName.split(' ');
+            let managerEmployeeId = await getEmployeeId(result8.manager);
+            console.log(`first:${firstName8}, last:${lastName8}, id: ${managerEmployeeId}`);
             initApp();
             break;
 

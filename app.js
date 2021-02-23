@@ -145,6 +145,11 @@ const initApp = async () => {
             initApp();
             break;
 
+        // Option 12
+        case 'Remove Department':
+            initApp();
+            break;
+
         // Exit option
         default:
             break;

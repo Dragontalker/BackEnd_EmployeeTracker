@@ -167,6 +167,11 @@ const initApp = async () => {
             initApp();
             break;
 
+        // Opetion 14
+        case 'Remove Employee':
+            initApp();
+            break;
+
         // Exit option
         default:
             break;

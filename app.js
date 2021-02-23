@@ -125,6 +125,8 @@ const initApp = async () => {
         
         // Option 10
         case 'View All Employees by Department':
+            let departmentArray10 = await getDepartmentNames();
+            console.log(departmentArray10);
             initApp();
             break;
 

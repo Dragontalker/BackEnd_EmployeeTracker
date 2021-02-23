@@ -29,6 +29,7 @@ const inqAddEmployee = require('./src/inquirer/inqAddEmployee');
 const getDepartmentNames = require('./src/get/getDepartmentNames');
 const inqUpdateRole = require('./src/inquirer/inqUpdateRole');
 const inqUpdateManager = require('./src/inquirer/inqUpdateManager');
+const updateManager = require('./src/update/updateManager');
 
 const db = connectDb();
 
@@ -104,7 +105,8 @@ const initApp = async () => {
             let result8 = await inqUpdateManager(employeeArray8, managerArray8);
             let [ firstName8, lastName8 ] = result8.fullName.split(' ');
             let managerEmployeeId = await getEmployeeId(result8.manager);
-            console.log(`first:${firstName8}, last:${lastName8}, id: ${managerEmployeeId}`);
+            await updateManager(firstName8, lastName8, managerEmployeeId);
+            console.table(await viewEmployees());
             initApp();
             break;
 

@@ -169,12 +169,17 @@ const initApp = async () => {
             initApp();
             break;
 
-        // Opetion 14
+        // Option 14
         case 'Remove Employee':
             let nameArray14 = await getNameArrays();
             let result14 = await inqRemoveEmployee(nameArray14);
             await removeEmployee(result14.name);
             console.table(await viewEmployees());
+            initApp();
+            break;
+
+        // Option
+        case 'View Department Budget':
             initApp();
             break;
 

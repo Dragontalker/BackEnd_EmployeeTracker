@@ -20,7 +20,7 @@ const inqMain = () => {
             'Remove Department',
             'Remove Role',
             'Remove Employee',
-            'View Department Budget',
+            'View Department Budget'
         ]
     });
 }

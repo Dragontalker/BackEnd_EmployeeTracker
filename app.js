@@ -151,9 +151,13 @@ const initApp = async () => {
         case 'Remove Department':
             let departmentArray12 = await getDepartmentNames();
             let result12 = await inqRemoveDepartment(departmentArray12);
-            console.log(result12.name);
             await removeDepartment(result12.name);
             console.table(await viewDepartments());
+            initApp();
+            break;
+        
+        // Option 13
+        case 'Remove Role':
             initApp();
             break;
 

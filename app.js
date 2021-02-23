@@ -39,6 +39,7 @@ const viewEmployeeByManager = require('./src/view/viewEmployeeByManager');
 const inqRemoveDepartment = require('./src/inquirer/inqRemoveDepartment');
 const removeDepartment = require('./src/remove/removeDepartment');
 const inqRemoveRole = require('./src/inquirer/inqRemoveRole');
+const removeRole = require('./src/remove/removeRole');
 
 const db = connectDb();
 
@@ -161,7 +162,8 @@ const initApp = async () => {
         case 'Remove Role':
             let roleArray13 = await getRoleNames();
             let result13 = await inqRemoveRole(roleArray13);
-            console.log(result13.name);
+            await removeRole(result13.name);
+            console.table(await viewRoles());
             initApp();
             break;
 

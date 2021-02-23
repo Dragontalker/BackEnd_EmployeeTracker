@@ -35,6 +35,7 @@ const updateDepartment = require('./src/update/updateDepartment');
 const inqViewEmployeeByDepartment = require('./src/inquirer/inqViewEmployeeByDepartment');
 const viewEmployeeByDepartment = require('./src/view/viewEmployeeByDepartment');
 const inqViewEmployeeByManager = require('./src/inquirer/inqViewEmployeeByManager');
+const viewEmployeeByManager = require('./src/view/viewEmployeeByManager');
 
 const db = connectDb();
 
@@ -140,7 +141,7 @@ const initApp = async () => {
             let managerArray11 = await getManagerNames();
             let result11 = await inqViewEmployeeByManager(managerArray11);
             let managerId11 = await getEmployeeId(result11.name);
-            console.log(managerId11);
+            console.table(await viewEmployeeByManager(managerId11));
             initApp();
             break;
 

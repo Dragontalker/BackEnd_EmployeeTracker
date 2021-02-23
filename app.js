@@ -98,6 +98,10 @@ const initApp = async () => {
 
         // Option 8
         case 'Update Employee Manager':
+            let employeeArray8 = await getNameArrays();
+            let managerArray8 = await getManagerNames();
+            console.log(employeeArray8);
+            console.log(managerArray8);
             initApp();
             break;
 

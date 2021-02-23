@@ -136,6 +136,8 @@ const initApp = async () => {
 
         // Option 11
         case 'View All Employees by Manager':
+            let managerArray11 = await getManagerNames();
+            console.log(managerArray11);
             initApp();
             break;
 

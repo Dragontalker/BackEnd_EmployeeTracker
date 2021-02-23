@@ -89,9 +89,10 @@ const initApp = async () => {
             let employeeList = await getNameArrays();
             let roleList = await getRoleNames();
             let userInput = await inqUpdateRole(employeeList, roleList);
-            let newRole = userInput.role;
+            let newId = await getRoleId(userInput.role);
             let [ first, last ] = userInput.fullName.split(' ');
-            console.log(`first_name: ${first}, last_name: ${last} role: ${newRole}`);
+            await updateRoleById(first, last, newId);
+            console.table(await viewEmployees());
             initApp();
             break;
 

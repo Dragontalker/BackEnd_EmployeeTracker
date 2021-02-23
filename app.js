@@ -109,6 +109,11 @@ const initApp = async () => {
             console.table(await viewEmployees());
             initApp();
             break;
+        
+        // Option 9
+        case 'Update Department of Role':
+            initApp();
+            break;
 
         // Exit option
         default:

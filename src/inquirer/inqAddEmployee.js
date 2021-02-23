@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-const inqAddEmployee = (roleArray, managerArray) => {
+const inqAddEmployee = (roleArray) => {
     return inquirer.prompt([
         {
             name: "firstName",
@@ -17,12 +17,6 @@ const inqAddEmployee = (roleArray, managerArray) => {
             type: "list",
             message: "What is the new employee's role?",
             choices: roleArray
-        },
-        {
-            name: "manager",
-            type: "list",
-            message: "Who is the manager of this new employee?",
-            choices: managerArray
         }
     ]);
 };

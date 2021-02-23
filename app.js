@@ -42,6 +42,7 @@ const inqRemoveRole = require('./src/inquirer/inqRemoveRole');
 const removeRole = require('./src/remove/removeRole');
 const inqRemoveEmployee = require('./src/inquirer/inqRemoveEmployee');
 const removeEmployee = require('./src/remove/removeEmployee');
+const calculateDepartmentBudget = require('./src/calculate/calculateDepartmentBudget');
 
 const db = connectDb();
 
@@ -178,8 +179,9 @@ const initApp = async () => {
             initApp();
             break;
 
-        // Option
+        // Option 15
         case 'View Department Budget':
+            console.table(await calculateDepartmentBudget());
             initApp();
             break;
 

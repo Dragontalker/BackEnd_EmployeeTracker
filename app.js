@@ -112,6 +112,10 @@ const initApp = async () => {
         
         // Option 9
         case 'Update Department of Role':
+            let roleArray9 = await getRoleNames();
+            let departmentArray9 = await getDepartmentNames();
+            console.log(roleArray9);
+            console.log(departmentArray9);
             initApp();
             break;
 

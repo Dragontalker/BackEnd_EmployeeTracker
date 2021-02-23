@@ -147,6 +147,8 @@ const initApp = async () => {
 
         // Option 12
         case 'Remove Department':
+            let departmentArray12 = await getDepartmentNames();
+            console.log(departmentArray12);
             initApp();
             break;
 

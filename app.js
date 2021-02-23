@@ -158,6 +158,8 @@ const initApp = async () => {
         
         // Option 13
         case 'Remove Role':
+            let roleArray13 = await getRoleNames();
+            console.log(roleArray13);
             initApp();
             break;
 

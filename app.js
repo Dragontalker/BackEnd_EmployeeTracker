@@ -30,6 +30,7 @@ const getDepartmentNames = require('./src/get/getDepartmentNames');
 const inqUpdateRole = require('./src/inquirer/inqUpdateRole');
 const inqUpdateManager = require('./src/inquirer/inqUpdateManager');
 const updateManager = require('./src/update/updateManager');
+const inqUpdateDepartment = require('./src/inquirer/inqUpdateDepartment');
 
 const db = connectDb();
 
@@ -114,8 +115,10 @@ const initApp = async () => {
         case 'Update Department of Role':
             let roleArray9 = await getRoleNames();
             let departmentArray9 = await getDepartmentNames();
-            console.log(roleArray9);
-            console.log(departmentArray9);
+            let result9 = await inqUpdateDepartment(roleArray9, departmentArray9);
+            let departmentId9 = await getDepartmentId(result9.department);
+            console.log(result9.role);
+            console.log(departmentId9);
             initApp();
             break;
 

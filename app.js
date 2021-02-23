@@ -96,6 +96,11 @@ const initApp = async () => {
             initApp();
             break;
 
+        // Option 8
+        case 'Update Employee Manager':
+            initApp();
+            break;
+
         // Exit option
         default:
             break;

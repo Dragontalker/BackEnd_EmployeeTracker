@@ -94,10 +94,8 @@ const initApp = async () => {
         // Option 6
         case 'Add Employee':
             let roleArray = await getRoleNames();
-            let managerArray = await getManagerNames();
-            let { firstName, lastName, role, manager } = await inqAddEmployee(roleArray, managerArray);
+            let { firstName, lastName, role } = await inqAddEmployee(roleArray);
             let roleId = await getRoleId(role);
-            let managerId = await getEmployeeId(manager)
             await addEmployee(firstName, lastName, roleId, managerId);
             console.table(await viewEmployees());
             initApp();

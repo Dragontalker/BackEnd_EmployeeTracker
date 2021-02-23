@@ -14,6 +14,7 @@ const inqMain = () => {
             'Add Employee',
             'Update Employee Role',
             'Update Employee Manager',
+            'Update Department of Role',
             'View All Employee by Department',
             'View All Employee by Manager',
             'Remove Department',

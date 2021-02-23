@@ -86,7 +86,9 @@ const initApp = async () => {
         // Option 7
         case 'Update Employee Role':
             let employeeList = await getNameArrays();
+            let roleList = await getRoleNames();
             console.log(employeeList);
+            console.log(roleList);
             initApp();
             break;
 

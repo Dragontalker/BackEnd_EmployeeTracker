@@ -122,6 +122,11 @@ const initApp = async () => {
             console.table(await viewRoles());
             initApp();
             break;
+        
+        // Option 10
+        case 'View All Employees by Department':
+            initApp();
+            break;
 
         // Exit option
         default:
